@@ -55,4 +55,7 @@ li {
 a {
   color: #42b983;
 }
+#HelloWorld {
+  text-align: center;
+}
 </style>
