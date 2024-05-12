@@ -3,48 +3,28 @@
     <img alt="Vue logo" src="./assets/logo.png">
   </div>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <input type="text" v-model="name">
-  <h4>Name: {{ name }}</h4>
-  <div>
-    <p>{{ message }}</p>
-    <button @click="changeMessage">Ubah Pesan</button>
-  </div>
-  <div>
-    <ul>
-      <li v-for="item in items" :key="item.id">{{ item.name }}</li>
-    </ul>
-    <button @click="addItem">Tambah Item</button>
-  </div>
+  <Nama/>
+  <Counter/>
+  <Pesan/>
+  <List/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Nama from './components/Nama.vue'
+import Counter from './components/Counter.vue'
+import Pesan from './components/Pesan.vue'
+import List from './components/List.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  },
-  data() {
-    return {
-      name: "",
-      message: 'Halo, Vue.js!!!',
-      items: [
-        {id: 1, name: 'Buku'},
-        {id:2, name: 'Pensil'},
-        {id:3, name: 'Penghapus'}
-      ]
-    }
-  },
-  methods: {
-    changeMessage() {
-      this.message = 'Pesan telah diubah!'
-    },
-    addItem() {
-      const newItem = {id: this.items.length+1, name:'Barang Baru'};
-      this.items.push(newItem);
-    }
-  },
+    HelloWorld,
+    Nama,
+    Counter,
+    Pesan,
+    List
+  }
 }
 </script>
 
